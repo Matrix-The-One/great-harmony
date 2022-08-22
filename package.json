@@ -1,36 +1,90 @@
 {
   "name": "@matrix/lint",
   "version": "1.0.0",
-  "description": "@matrix/lint",
+  "private": false,
+  "description": "@matrix/lint, A lint config library",
+  "keywords": [
+    "@matrix/lint",
+    "eslint",
+    "stylelint",
+    "prettier",
+    "tsconfig",
+    "tslint"
+  ],
   "homepage": "https://github.com/Matrix-The-One/lint",
   "bugs": "https://github.com/Matrix-The-One/lint/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/Matrix-The-One/lint"
   },
+  "license": "MIT",
+  "author": "Matrix-The-One",
   "files": [
-    "eslint",
-    "stylelint",
-    "commitlint",
-    "prettier"
+    "src"
   ],
   "scripts": {
-    "clean": "rimraf node_modules package-lock.json yarn.lock pnpm-lock.yaml"
+    "commit": "git-cz",
+    "commitlint": "commitlint --config .commitlintrc.js -e -V",
+    "postinstall": "husky install",
+    "lint": "npm run lint:style && npm run lint:js && npm run lint:prettier",
+    "lint-staged": "lint-staged",
+    "lint:js": "eslint --fix --quiet --ext .js,.jsx,.ts,.tsx,.vue ./src --cache --cache-location \"./node_modules/.cache/eslint/.eslintcache\"",
+    "lint:prettier": "prettier --write --check --cache --ignore-unknown \"src/**/*\"",
+    "lint:style": "stylelint --fix --quiet \"src/**/*.{css,less,scss}\" --cache --cache-location \"./node_modules/.cache/stylelint/.stylelintcache\"",
+    "tsc": "tsc --noEmit",
+    "update": "rimraf node_modules pnpm-lock.yaml && pnpm i"
   },
-  "keywords": [
-    "@matrix/lint"
-  ],
-  "author": "Matrix-The-One",
-  "license": "MIT",
+  "lint-staged": {
+    "**/*.{css,less,scss}": "npm run lint:style",
+    "**/*.{js,jsx,ts,tsx,vue}": "npm run lint:js",
+    "**/*": "npm run lint:prettier"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
     "@stylelint/postcss-css-in-js": "^0.38.0",
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-vue": "^9.3.0",
     "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
     "postcss-scss": "^4.0.4",
+    "prettier": "^2.7.1",
+    "prettier-plugin-packagejson": "^2.2.18",
+    "stylelint": "^14.9.1",
     "stylelint-config-css-modules": "^4.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-standard": "^26.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.5.0"
+    "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
+    "typescript": "^4.7.4",
+    "vue-eslint-parser": "^9.0.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/react": "^17.0.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "react": "^17.0.2",
+    "vue": "^2.6.14"
   }
 }

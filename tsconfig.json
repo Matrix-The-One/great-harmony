@@ -1,0 +1,11 @@
+{
+  "extends": "./src/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src", "mock", "test", "typings", "config"],
+  "exclude": ["node_modules", "build", "dist", "scripts", "webpack", "jest"]
+}

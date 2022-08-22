@@ -1,0 +1,15 @@
+module.exports = {
+  'for-direction': 2,
+  'getter-return': 1,
+  'no-prototype-builtins': 0,
+  'guard-for-in': 0,
+  'no-eval': 0,
+  'no-void': 0,
+  'no-with': 0,
+  'prefer-promise-reject-errors': 0,
+  'no-unused-vars': 1,
+  'comma-dangle': [1, 'only-multiline'],
+  'no-new-object': 0,
+  quotes: [1, 'single'],
+  semi: [1, 'never'],
+}
