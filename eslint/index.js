@@ -1,3 +1,4 @@
+const path = require('path')
 const tsRules = require('./rules/ts')
 const vueRules = require('./rules/vue')
 const reactRules = require('./rules/react')
@@ -30,6 +31,7 @@ module.exports = {
     ecmaFeatures: { jsx: true },
     requireConfigFile: false,
     babelOptions: {
+      cwd: path.join(__dirname, '..'),
       presets: ['@babel/preset-react'],
     },
   },

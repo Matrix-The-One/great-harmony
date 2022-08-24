@@ -2,7 +2,7 @@
   "name": "@matrix/lint",
   "version": "1.0.0-alpha.1",
   "private": false,
-  "description": "@matrix/lint, A lint config library",
+  "description": "@matrix/lint, A lint configuration library",
   "keywords": [
     "@matrix/lint",
     "eslint",
@@ -19,8 +19,13 @@
   },
   "license": "MIT",
   "author": "Matrix-The-One",
+  "main": "index.js",
   "files": [
-    "src"
+    "index.js",
+    "eslint",
+    "stylelint",
+    "prettier",
+    "tsconfig"
   ],
   "scripts": {
     "commit": "git-cz",
