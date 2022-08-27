@@ -78,7 +78,7 @@ module.exports = {
 }
 ```
 
-- VSCode: First you need to install [ESlint][vscode-eslint], [Stylelint][vscode-stylelint], [Prettier][vscode-prettier] plugins, and then add the following configuration to the [settings.json][vscode- settings] file with the following configuration.
+- VSCode: First you need to install [ESlint][vscode-eslint], [Stylelint][vscode-stylelint], [Prettier][vscode-prettier] plugins, and then add the following configuration to the [settings.json][vscode-settings] file with the following configuration.
 
 ```js
 {
@@ -100,7 +100,7 @@ module.exports = {
 npm install great-harmony -g
 ```
 
-- VSCode: First you need to install [ESlint][vscode-eslint], [Stylelint][vscode-stylelint], [Prettier][vscode-prettier] plugins, and then add the following configuration to the [settings.json][vscode- settings] file with the following configuration.
+- VSCode: First you need to install [ESlint][vscode-eslint], [Stylelint][vscode-stylelint], [Prettier][vscode-prettier] plugins, and then add the following configuration to the [settings.json][vscode-settings] file with the following configuration.
 
   - Please replace `$path` with the directory where the npm global package is installed on your computer, you can use `npm prefix -g` command to see it.
   - If you use `Less`, replace the value of `stylelint.customSyntax` with `postcss-less`.
