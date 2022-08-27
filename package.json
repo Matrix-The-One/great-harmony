@@ -1,6 +1,6 @@
 {
   "name": "great-harmony",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "great-harmony, A lint configuration library containing ESlint, Stylelint, Prettier, TSConfig configurations for React, Vue projects.",
   "keywords": [
     "great-harmony",
@@ -9,11 +9,11 @@
     "prettier",
     "tsconfig"
   ],
-  "homepage": "https://github.com/Matrix-The-One/lint",
-  "bugs": "https://github.com/Matrix-The-One/lint/issues",
+  "homepage": "https://github.com/Matrix-The-One/great-harmony",
+  "bugs": "https://github.com/Matrix-The-One/great-harmony/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Matrix-The-One/lint"
+    "url": "https://github.com/Matrix-The-One/great-harmony"
   },
   "license": "MIT",
   "author": "Matrix-The-One",
