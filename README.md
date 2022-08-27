@@ -59,7 +59,7 @@ module.exports = {
 }
 ```
 
-- TSConfig: Add the following configuration to the tsconfig.json file.
+- TSConfig: Add the following configuration to the `tsconfig.json` file.
 
 ```js
 {
