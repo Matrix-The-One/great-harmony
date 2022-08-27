@@ -6,6 +6,25 @@ module.exports = {
     'stylelint-config-recess-order',
   ],
   plugins: ['stylelint-declaration-block-no-ignored-properties'],
+  customSyntax: 'postcss-scss',
+  overrides: [
+    {
+      files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
+      customSyntax: '@stylelint/postcss-css-in-js',
+    },
+    {
+      customSyntax: 'postcss-scss',
+      files: ['**/*.css', '**/*.scss'],
+    },
+    {
+      customSyntax: 'postcss-less',
+      files: ['**/*.less'],
+    },
+    {
+      customSyntax: 'postcss-html',
+      files: ['**/*.html', '**/*.vue'],
+    },
+  ],
   rules: {
     'plugin/declaration-block-no-ignored-properties': true,
     'function-url-quotes': 'always',
@@ -38,23 +57,4 @@ module.exports = {
       },
     ],
   },
-  customSyntax: 'postcss-scss',
-  overrides: [
-    {
-      files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
-      customSyntax: '@stylelint/postcss-css-in-js',
-    },
-    {
-      customSyntax: 'postcss-scss',
-      files: ['**/*.css', '**/*.scss'],
-    },
-    {
-      customSyntax: 'postcss-less',
-      files: ['**/*.less'],
-    },
-    {
-      customSyntax: 'postcss-html',
-      files: ['**/*.html', '**/*.vue'],
-    },
-  ],
 }

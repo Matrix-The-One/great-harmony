@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['./stylelint'],
+  extends: require.resolve('./stylelint'),
 }

@@ -1,15 +1,13 @@
 {
-  "name": "@matrix/lint",
-  "version": "1.0.0-alpha.1",
-  "private": false,
-  "description": "@matrix/lint, A lint configuration library",
+  "name": "great-harmony",
+  "version": "0.1.0",
+  "description": "great-harmony, A lint configuration library containing ESlint, Stylelint, Prettier, TSConfig configurations for React, Vue projects.",
   "keywords": [
-    "@matrix/lint",
+    "great-harmony",
     "eslint",
     "stylelint",
     "prettier",
-    "tsconfig",
-    "tslint"
+    "tsconfig"
   ],
   "homepage": "https://github.com/Matrix-The-One/lint",
   "bugs": "https://github.com/Matrix-The-One/lint/issues",
@@ -25,12 +23,13 @@
     "eslint",
     "stylelint",
     "prettier",
-    "tsconfig"
+    "tsconfig",
+    "docs",
+    ".eslintignore"
   ],
   "scripts": {
     "commit": "git-cz",
-    "commitlint": "commitlint --config .commitlintrc.js -e -V",
-    "postinstall": "husky install",
+    "commitlint": "commitlint --config .commitlintrc.js -e",
     "lint": "npm run lint:style && npm run lint:js && npm run lint:prettier",
     "lint-staged": "lint-staged",
     "lint:js": "eslint --fix --quiet --ext .js,.jsx,.ts,.tsx,.vue ./src --cache --cache-location \"./node_modules/.cache/eslint/.eslintcache\"",
@@ -85,7 +84,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@types/react": "^17.0.2",
+    "@types/react": "^17.0.48",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
