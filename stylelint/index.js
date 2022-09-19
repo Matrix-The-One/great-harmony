@@ -27,6 +27,7 @@ module.exports = {
   ],
   rules: {
     'plugin/declaration-block-no-ignored-properties': true,
+    'value-no-vendor-prefix': null,
     'function-url-quotes': 'always',
     'selector-type-no-unknown': null,
     'no-descending-specificity': null,

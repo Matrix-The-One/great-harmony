@@ -5,6 +5,7 @@
 .history
 .DS_Store
 .eslintcache
+.stylelintcache
 
 dist
 build
