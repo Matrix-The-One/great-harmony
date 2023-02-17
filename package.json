@@ -72,7 +72,7 @@
     "postcss-scss": "^4.0.4",
     "prettier": "^2.7.1",
     "prettier-plugin-packagejson": "^2.2.18",
-    "stylelint": "^14.9.1",
+    "stylelint": "^15.1.0",
     "stylelint-config-css-modules": "^4.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recess-order": "^3.0.0",
