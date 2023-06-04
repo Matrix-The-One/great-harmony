@@ -1,6 +1,6 @@
 {
   "name": "great-harmony",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "great-harmony, A lint configuration library containing ESlint, Stylelint, Prettier, TSConfig configurations for React, Vue projects.",
   "keywords": [
     "great-harmony",
